@@ -7,7 +7,11 @@
 
 ## Start
 
-* `npm run dev` or  npm run dev:client , npm run dev:serve two command line
+* `npm run dev`
+
+## Build
+
+* `npm run build`
 
 
 ## Test
