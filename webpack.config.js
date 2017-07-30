@@ -1,5 +1,5 @@
 /**
- * @author zhouziyao@meituan.com
+ * @author zhouziyao
  * @description Webpakc Config use for dev and dist
  */
 
