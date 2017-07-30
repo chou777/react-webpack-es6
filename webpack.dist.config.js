@@ -24,8 +24,8 @@ var manifest = function () {
 
 
 config.output = {
-  filename: '[name].[chunkhash:8].js',
-  chunkFilename: '[name].[chunkhash:8].js',
+  filename: 'js/[name].[chunkhash:8].js',
+  chunkFilename: 'js/[name].[chunkhash:8].js',
   path: path.resolve(__dirname, 'build/'),
   publicPath: '/',
 };
