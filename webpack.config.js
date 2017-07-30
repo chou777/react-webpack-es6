@@ -9,7 +9,7 @@ var webpack = require('webpack');
 var path = require('path');
 
 var extractLess = new ExtractTextPlugin({
-  filename: process.env.NODE_ENV === 'development' ? '[name].css' : '[name].[chunkhash:8].css',
+  filename: process.env.NODE_ENV === 'development' ? 'css/[name].css' : 'css/[name].[chunkhash:8].css',
   disable: false
 });
 
