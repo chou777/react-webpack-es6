@@ -24,8 +24,8 @@ config.plugins = config.plugins.concat([
   new webpack.HotModuleReplacementPlugin(),
 
   new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html'
+    filename: 'index.html',
+    template: 'src/index.html'
   })
 ]);
 

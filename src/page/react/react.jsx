@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import PropTypes from 'prop-types';
+import { DatePicker } from 'antd';
+import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 
 import './react.less';
-
 const img = require('../../img/react-logo.png');
 
 class App extends React.Component {
@@ -27,6 +28,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>{this.state.stateX} - {this.state.count}</h1>
+        <DatePicker />
         <button onClick={this.addCount}>{this.state.count} + 1</button>
         <div>{this.props.name}</div>
       </div>

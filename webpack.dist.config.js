@@ -2,6 +2,8 @@ var webpack = require('webpack');
 var path = require('path');
 var config = require('./webpack.config');
 var fs = require('fs');
+var CompressionPlugin = require('compression-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // 构建manifest文件
 var manifest = function () {
@@ -48,7 +50,18 @@ config.plugins = config.plugins.concat([
       except: []
     }
   }),
-  manifest
+  manifest,
+  new HtmlWebpackPlugin({
+    filename: 'index.html',
+    template: 'src/index.html'
+  }),
+  new CompressionPlugin({
+    asset: '[path].gz[query]',
+    algorithm: 'gzip',
+    test: /\.js$|\.css$|\.html$/,
+    threshold: 10240,
+    minRatio: 0.8
+  })
 ]);
 
 module.exports = config;

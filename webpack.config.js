@@ -90,6 +90,7 @@ module.exports = {
   plugins: [
     extractLess,
     // 提取公共模块。
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: function (module) {

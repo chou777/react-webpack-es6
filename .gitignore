@@ -8,6 +8,7 @@ env
 assets/release/*
 
 /dist/*
+/build/*
 node_modules
 bower_components
 npm-debug.log
