@@ -37,10 +37,7 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /(node_modules|bower_components)/,
       use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['es2015']
-        }
+        loader: 'babel-loader' //config .babelrc
       }]
     }, {
       test: /\.less$/,
@@ -64,9 +61,7 @@ module.exports = {
       use: extractLess.extract({
         use: [{
           loader: 'css-loader',
-          options: {
-            minimize: true
-          }
+          options: { minimize: true }
         }, {
           loader: 'postcss-loader',
           options: postCssOptions

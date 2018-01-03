@@ -1,5 +1,7 @@
 {
+  "parser": "babel-eslint",
   "extends": "airbnb",
+  "plugins": ["jsx-a11y"],
   "env": {
     "browser": true,
     "node": true,
@@ -15,6 +17,28 @@
     "prefer-arrow-callback": 0,
     "no-console": 0,
     "no-param-reassign": ["error", { "props": false }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "object-curly-newline": ["error", {
+        "ObjectExpression": "always",
+        "ObjectPattern": { "multiline": true }
+    }],
+    'prefer-destructuring': [
+      'error',
+      {
+        VariableDeclarator: {
+          array: false,
+          object: true,
+        },
+        AssignmentExpression: {
+          array: false,
+          object: false,
+        },
+      },
+      {
+        enforceForRenamedProperties: false,
+      },
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2,2]
   }
 }
