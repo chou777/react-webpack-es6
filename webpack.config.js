@@ -26,7 +26,7 @@ module.exports = {
   },
   entry: {
     react: [
-      './src/page/react/react.jsx'
+      './src/page/react/react.js'
     ],
     vendor: [
       './node_modules/normalize.css/normalize.css',
