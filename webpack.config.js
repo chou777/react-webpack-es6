@@ -29,6 +29,7 @@ module.exports = {
       './src/page/react/react.js'
     ],
     vendor: [
+      './src/css/common.less',
       './node_modules/normalize.css/normalize.css',
     ]
   },
@@ -73,12 +74,23 @@ module.exports = {
     }, {
       test: /\.(jpg|jpeg|gif|png)$/i,
       use: [
-        { loader: 'file-loader' }
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'images/[name]-[hash].[ext]'
+          }
+        }
+
       ]
     }, {
       test: /\.(eot|svg|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
       use: [
-        { loader: 'file-loader' }
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'images/[name]-[hash].[ext]'
+          }
+        }
       ]
     }]
   },
